@@ -12,3 +12,22 @@ This is a repository where mathematical calculation algorithms are found.
 
 Entry point: index.js 
 
+Determinants: 
+    * array 2x2
+    * array 3x3
+    * array 4x4
+
+Inverse Matrix:
+    * array 2x2
+    * is inverse ?  array 2x2
+
+Transposed Matrix:
+    * array nxn
+
+Vector:
+    * Adds the contents of an vector
+    * multiply vector by a value
+
+solve systems of linear equations:
+    * lineal 2x2
+    * lineal 3x3
