@@ -10,24 +10,24 @@ This is a repository where mathematical calculation algorithms are found.
 "build": "npm run build-browser & npm run build-node",
 ```
 
-Entry point: index.js 
+* Entry point: index.js 
 
-Determinants: 
-    * array 2x2
-    * array 3x3
-    * array 4x4
+1.- Determinants: 
+- array 2x2
+- array 3x3
+- array 4x4
 
-Inverse Matrix:
-    * array 2x2
-    * is inverse ?  array 2x2
+2.- Inverse Matrix:
+- array 2x2
+- is inverse ?  array 2x2
 
-Transposed Matrix:
-    * array nxn
+3.- Transposed Matrix:
+- array nxn
 
-Vector:
-    * Adds the contents of an vector
-    * multiply vector by a value
+4.- Vector:
+- Adds the contents of an vector
+- multiply vector by a value
 
-solve systems of linear equations:
-    * lineal 2x2
-    * lineal 3x3
+5.- solve systems of linear equations:
+- lineal 2x2
+- lineal 3x3
