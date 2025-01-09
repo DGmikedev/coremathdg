@@ -10,11 +10,16 @@ This is a repository where mathematical calculation algorithms are found.
 "build": "npm run build-browser & npm run build-node",
 ```
 
+from index.js -> entry point
+
 1.- Determinants: 
 
 ``` javascript
 
 //  array 2x2
+
+   import { determinant2x2, determinant3x3, determinant4x4 } from './arrays/determinants.js'
+
    let arr2x2=[ [1, 5], [8, 4] ];
    console.log( determinant2x2(arr2x2) ) // det = -36
 // return { status: true, msg: '', res: -36 }
@@ -42,6 +47,7 @@ This is a repository where mathematical calculation algorithms are found.
 ``` javascript
 
 //  inverse of an array 2x2
+    import { getInvArr2x2, isInvers2x2 } from './arrays/invers.js'
 
     let arr2x2 = [ [3, 8], [7, 5] ];
 
@@ -72,7 +78,34 @@ This is a repository where mathematical calculation algorithms are found.
 ```
 
 3.- Transposed Matrix:
-- array nxn
+
+``` javascript
+
+// array N x N
+
+    import { trsnpSqrMtrx } from './arrays/transposed.js'
+
+    let arr4x4=[
+        [1, 3, 7, 4],
+        [2, 4, 8, 2],
+        [1, 5, 3, 2],
+        [1, 5, 3, 2],
+    ];
+
+    console.log( trsnpSqrMtrx(arr4x4) ) 
+
+//  return
+//  {
+//      status: true, msg: '',
+//      res: [ [ 1, 2, 1, 1 ], 
+//             [ 3, 4, 5, 5 ], 
+//             [ 7, 8, 3, 3 ], 
+//             [ 4, 2, 2, 2 ] 
+//          ]
+//  }
+
+```
+ 
 
 4.- Vector:
 - sum the contents of an vector
