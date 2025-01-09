@@ -16,6 +16,7 @@ This is a repository where mathematical calculation algorithms are found.
 - array 2x2
 - array 3x3
 - array 4x4
+  
 
 2.- Inverse Matrix:
 - array 2x2
@@ -25,7 +26,7 @@ This is a repository where mathematical calculation algorithms are found.
 - array nxn
 
 4.- Vector:
-- Adds the contents of an vector
+- sum the contents of an vector
 - multiply vector by a value
 
 5.- solve systems of linear equations:
