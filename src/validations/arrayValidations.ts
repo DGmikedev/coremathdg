@@ -6,7 +6,7 @@ import { DataError } from "../results/Errors.js";
  * @param arr { array }
  * @returns    { boolean }
  */
-export function iScudrticAndNumc(arr:number[][]):Result{
+export function iSSquareAndNumc(arr:number[][]):Result{
 
     let lng: number = arr.length;
     let msgW: string = 'Something are wrong square matrix';

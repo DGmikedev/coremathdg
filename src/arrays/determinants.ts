@@ -1,5 +1,5 @@
 import { result, Result } from '../results/results.js'
-import { iScudrticAndNumc } from '../validations/arrayValidations.js'
+import { iSSquareAndNumc } from '../validations/arrayValidations.js'
 
 /**
  * return the determinant of an array 2x2
@@ -14,7 +14,7 @@ export function determinant2x2(arr:number[][]): Result {
     let determinant:number = 0;
 
     // Block of validations
-    let { status, msg, res } = iScudrticAndNumc(arr)
+    let { status, msg, res } = iSSquareAndNumc(arr)
     if(!status) return result( status, msg + '[determinant2x2]', res )
      // end block   
 
@@ -47,7 +47,7 @@ export function determinant3x3(arr_input:number[][]): Result{
     let result3x3: Result;
 
     // Block of validations
-    let { status, msg, res } = iScudrticAndNumc(arr_input)
+    let { status, msg, res } = iSSquareAndNumc(arr_input)
     if(!status) return result( status, msg + ' [determinant3x3]', res )
     // end block
 
@@ -104,7 +104,7 @@ export function determinant4x4(arr:number[][]): Result{
 
 
     // Block of validations
-    let { status, msg, res } = iScudrticAndNumc(arr)
+    let { status, msg, res } = iSSquareAndNumc(arr)
     if(!status) return result( status, msg + ' [determinant4x4]', res )
     // end block
 

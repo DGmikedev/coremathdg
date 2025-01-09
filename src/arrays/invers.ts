@@ -1,5 +1,5 @@
 import { Result, result } from "../results/results.js";
-import { iScudrticAndNumc, iSNumeric } from '../validations/arrayValidations.js'
+import { iSSquareAndNumc, iSNumeric } from '../validations/arrayValidations.js'
 
 /**
  * return de inverse array 2x2
@@ -12,7 +12,7 @@ export function getInvArr2x2(arr:number[][], det:number): Result{
     let invA:number[][] = [];
     
     // Block of validations
-    let {status, msg, res} = iScudrticAndNumc(arr)
+    let {status, msg, res} = iSSquareAndNumc(arr)
     if(!status) return result( status, msg + ' [getInvArr2x2[x][]]', res )
 
     if(det === 0) return result(false, `Determinant is equal to zero [getInvArr2x2[][${det}]]`, NaN)    
@@ -47,10 +47,10 @@ export function isInvers2x2(arr:number[][], isInvrs:number[][]): Result{
     let acm:number = 0;
 
     // Block of validations
-    let arrO: Result = iScudrticAndNumc(arr)
+    let arrO: Result = iSSquareAndNumc(arr)
     if(!arrO.status) return result( arrO.status, arrO.msg + ' [isInvers2x2[x][]]', arrO.res )
 
-    let arrInv: Result = iScudrticAndNumc(isInvrs)
+    let arrInv: Result = iSSquareAndNumc(isInvrs)
     if(!arrInv.status) return result( arrInv.status, arrInv.msg + ' [isInvers2x2[][x]]', arrInv.res )
     // end block 
 
