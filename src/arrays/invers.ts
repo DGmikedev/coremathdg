@@ -56,8 +56,8 @@ export function isInvers2x2(arr:number[][], isInvrs:number[][]): Result{
 
     try{
         identityMtrx = [
-            [ ( arr[0][0] * isInvrs[0][0] ) + ( arr[0][1] * isInvrs[1][0] ) ,  ( arr[0][0] * isInvrs[0][1] ) + ( arr[0][1] * isInvrs[1][1] ) ],
-            [ ( arr[1][0] * isInvrs[0][0] ) + ( arr[1][1] * isInvrs[1][0] ) ,  ( arr[1][0] * isInvrs[0][1] ) + ( arr[1][1] * isInvrs[1][1] ) ]
+            [ Math.round( ( arr[0][0] * isInvrs[0][0] ) + ( arr[0][1] * isInvrs[1][0] ) ) , Math.round( ( arr[0][0] * isInvrs[0][1] ) + ( arr[0][1] * isInvrs[1][1] ) ) ] ,
+            [ Math.round( ( arr[1][0] * isInvrs[0][0] ) + ( arr[1][1] * isInvrs[1][0] ) ),  Math.round( ( arr[1][0] * isInvrs[0][1] ) + ( arr[1][1] * isInvrs[1][1] ) ) ] 
         ]
 
         identityMtrx.forEach((vector)=>{
