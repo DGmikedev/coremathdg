@@ -1,0 +1,13 @@
+{
+  "name": "dg-mth-core",
+  "version": "1.0.0",
+  "scripts": {
+    "build-browser": "tsc --project tsconfig.browser.json",
+    "build-node": "tsc --project tsconfig.node.json",
+    "build": "npm run build-browser & npm run build-node",
+    "ti": "npx tsx ./src/index.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}
