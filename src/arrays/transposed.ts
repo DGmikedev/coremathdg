@@ -22,11 +22,7 @@ export function trsnpSqrMtrx(arr: number[][]):Result{
         });
 
     }catch( error ){
-
         return result(false, error , NaN)
-
     }
-
     return result(true, '', arrTr)
-
 }

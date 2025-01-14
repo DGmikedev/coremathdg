@@ -108,9 +108,76 @@ from index.js -> entry point
  
 
 4.- Vector:
-- sum the contents of an vector
-- multiply vector by a value
+```javascript
+
+   import { vctrSum, vctrXn } from './arrays/vector.js'
+
+    // sum the contents of an vector
+    let vctr = [1,2,3,4,5,6]
+    console.log(  vctrSum(vctr) ) // sum = 21
+    // return { status: true, msg: '', res: 21 }
+
+
+    // multiply vector by a value
+    let vctr = [6,8,9];
+    let multNumber = 3;
+
+    //                   [6,8,9],  3
+    console.log( vctrXn( vctr,    multNumber) ) // res = [ 18, 24, 27 ]
+    //return { status: true, msg: '', res: [ 18, 24, 27 ] }
+    
+```
+
+
 
 5.- solve systems of linear equations:
-- lineal 2x2
-- lineal 3x3
+```javascript
+
+    import { solveLn2x2 } from './solve/solveLn2x2.js'
+
+    // solve system eq: lineal 2x2
+
+    // if:  x = 3, y = 2
+
+    // 2x + y  = 8
+    // 7x + 2y = 25
+    
+    let eq = [ 
+        [2, 1, 8],
+        [7, 2, 25]
+    ];
+
+    console.log( solveLn2x2(eq) ) // res = x:3, y:2
+
+    // return 
+    // {
+    //     status: true,
+    //     msg: { delta: -3, delta_x: -9, delta_y: -6 },
+    //     res: { x: 3, y: 2 }
+    // }
+
+    // solve system lineal 3x3
+
+    import { solveLn3x3 } from "./solve/solveLn3x3.js"
+
+    // if
+    // 11x+32y−7z=−18
+    // 31x+42y+33z=2
+    // 31x+43y+29z=−2
+
+    let eq = [ 
+        [11, 32, -7, -18],
+        [31, 42, 33,  2],
+        [31, 43, 29, -2]
+    ];
+
+    console.log( solveLn3x3(eq) ) // res = { x:-1, y:0, z:1 }
+
+    // return 
+    // {
+    //   status: true,
+    //   msg: 'deltaX:-1540, deltaY:0, deltaZ:1540, delta:1540 ',
+    //   res: { x: -1, y: 0, z: 1 }
+    // }
+
+```

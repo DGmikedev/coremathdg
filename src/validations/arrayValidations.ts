@@ -13,11 +13,9 @@ export function iSSquareAndNumc(arr:number[][]):Result{
     let ind:number = 0;
 
     try{
-
         arr.forEach((vector, index)=>{
 
             if(vector.length != lng){
-               
                ind = index 
                throw( new DataError(`${msgW} NOT are Square Matrix  ${lng} x ${vector.length}`) )  
             } 
@@ -28,17 +26,12 @@ export function iSSquareAndNumc(arr:number[][]):Result{
                   throw( new DataError(`${msgW} this have a Not Number: [ ${number} ]  ${lng} x ${vector.length} --  ${arr} `) )  
                 } 
             })
-    
         });
 
     }catch(error){
-
         return result(false,error, arr[ind])
     }
-    
-
-    return result(true, {'lng':lng, 'txt':`${lng} x ${lng}`}, true)
-
+        return result(true, {'lng':lng, 'txt':`${lng} x ${lng}`}, true)
 }
 
 /**
@@ -68,16 +61,12 @@ export function iSNumVect(vect: number[]):Result{
 export function iSNumeric(number: number):Result{
 
     try{
-
         if(isNaN(number)) throw( new DataError(`Error value is NOT a Number [ ${number} ]`)  )
 
     }catch(error){
-
         return result(false,error, NaN )
     }
-
     return result(true, '', true) 
-
 }
 
 export function iSNumcMtrxAndHasNVec(arr:number[][], vectrsNum:number): Result{

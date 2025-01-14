@@ -35,7 +35,7 @@ export function solveLn3x3(arr: number[][]):Result{
         [0,2,1,1,2,0],
         [1,2,2,1,3,0],
         [2,2,3,1,4,0]
-        ] 
+    ] 
 
     coordsTmp = structuredClone(coordinates)
         
@@ -57,15 +57,11 @@ export function solveLn3x3(arr: number[][]):Result{
     
     // case Y
     const mtrxToY:number[][] = prepareY(coordinates)
-    
     const spltMatrixToY:number[][][] = splitMatrix(mtrxToY)
-    
     const deltaY:number = evalue(arr_in,spltMatrixToY)
-
-    const mtrxToZ = prepareZ(coordinates)
-
-    const spltMatrixToZ:number[][][] = splitMatrix(mtrxToZ)
     
+    const mtrxToZ = prepareZ(coordinates)
+    const spltMatrixToZ:number[][][] = splitMatrix(mtrxToZ)
     const deltaZ:number = evalue(arr_in,spltMatrixToZ)
     
     try{
@@ -86,9 +82,7 @@ export function solveLn3x3(arr: number[][]):Result{
             return result( false, `The equations do not belong to the same system of equations OR exist an error to computing x: ${ Math.round(x) } | y: ${ Math.round(y)} | z: ${Math.round(z)} | delta: ${ delta }`, NaN );
         } 
 
-
     }catch(error){
-
         return result(false, error, NaN)
     }
 }
@@ -104,11 +98,8 @@ function prepareX(arrMain:number[][]): number[][]{
     let arrTemp:number[][] = structuredClone(arrMain)
     
     for(let index = 0; index < 6; index++){
-      
       if(index < 3){ arrTemp[index][1] = 3 }else{ arrTemp[index][5] = 3 }
-      
     } 
-    
     return arrTemp
 }
   
@@ -125,7 +116,6 @@ function prepareY(arrMain:number[][]):number[][]{
     for( let index = 0; index < 6; index++){
         arrTemp[index][3] = 3
     }
-
     return arrTemp
 }
   
@@ -162,7 +152,6 @@ function evalue(arr:number[][], spltMtrxCoord:number[][][]): number{
                     res2 += getVectorProduct(arr, spltMtrxCoord[i][j])
         }
     }
-
     return res - res2;
 }
  
@@ -195,7 +184,6 @@ function splitMatrix(arrTemp:number[][]): number[][][]{
 
         if(index < 3){ temp.push(vector) }else{ temp2.push(vector)  }
     })
-
     re.push(temp);
     re.push(temp2);
 

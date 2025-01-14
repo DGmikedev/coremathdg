@@ -71,13 +71,9 @@ export function determinant3x3(arr_input:number[][]): Result{
     try{
 
         deltaCords0.forEach((vector)=>{
-    
               tmp = vector.reduce((a,b)=> a * b, 1 )
-    
               cont < 3 ? leftToRight += tmp  : RightToleft += tmp ;
-    
             cont++
-    
         })
     
     }catch(error){
@@ -85,9 +81,7 @@ export function determinant3x3(arr_input:number[][]): Result{
     }
 
     delta = leftToRight - RightToleft
-
     if(delta == 0) return  result(true, `¡warning determinant = 0! data: [ ${arr[0]}], [${arr[1]}], [${arr[2]}]`, delta.toString() )  
-
     return result(true, '', delta);
 
 }
@@ -153,7 +147,6 @@ function setArray4x4(arr: number[][], range:number[], skipt:number): number[][]{
     for(let i = 1; i < 4; i++){
     
         for(let j = range[0]; j < range[1]; j++){ 
-  
             if( j === skipt ){  continue 
             }else{
                  vectTmp.push(arr[i][j]) 
@@ -161,7 +154,6 @@ function setArray4x4(arr: number[][], range:number[], skipt:number): number[][]{
         }
     
         vectSnd.push(vectTmp)
-    
         vectTmp = []
     }
     

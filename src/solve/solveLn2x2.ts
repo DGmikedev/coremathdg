@@ -59,14 +59,11 @@ export function solveLn2x2(arr:number[][]): Result{
 
     // if allright send solutions
     if( t === 2){
-
        return result(true, { delta:delta, delta_x:deltaX, delta_y:deltaY },  { x:x, y:y } );
 
     // if an equation is not equal to result 
     }else{
-
        return result( false, `The equations do not belong to the same system of equations OR exist an error to computing x: ${ Math.round(x) } | y: ${ Math.round(y)} | delta: ${ delta }`, NaN );
-
     }
 
 }

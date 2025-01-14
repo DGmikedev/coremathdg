@@ -3,6 +3,7 @@
 // import { trsnpSqrMtrx } from './arrays/transposed.js'
 // import { solveLn2x2 } from './solve/solveLn2x2.js'
 // import { solveLn3x3 } from "./solve/solveLn3x3.js" 
+// import { vctrSum, vctrXn } from './arrays/vector.js'
 
 
-// Here invocation of functions
+// entry point 
