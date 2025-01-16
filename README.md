@@ -1,16 +1,22 @@
 # coremathdg
-This is a repository where mathematical calculation algorithms are found.
 
-
-### Build the project to Browser or Node
-#### or just Browser or just Node
+```javascript
+// to start
+npm install all
+```
+## Build the project to Browser or Node
 ``` json
+// just browser
 "build-browser": "tsc --project tsconfig.browser.json",
+
+// just node
 "build-node": "tsc --project tsconfig.node.json",
+
+// both 
 "build": "npm run build-browser & npm run build-node",
 ```
 
-from index.js -> entry point
+### entry point: index.js
 
 1.- Determinants: 
 
@@ -181,3 +187,4 @@ from index.js -> entry point
     // }
 
 ```
+6.- solvs electric circuits by Ohm´s law (documentation at their directory)
