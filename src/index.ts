@@ -4,17 +4,9 @@
 // import { solveLn2x2 } from './solve/solveLn2x2.js'
 // import { solveLn3x3 } from "./solve/solveLn3x3.js" 
 // import { vctrSum, vctrXn } from './arrays/vector.js'
-import { ElectricCts } from './elect/ElectricCts.js'
-
-console.log( ElectricCts.getVoltage(2,4) )
-
-//return 
-
-
-console.log( ElectricCts.getCurrent(5,7) )
-
-
-console.log( ElectricCts.getResistence(1, 12) )
-
+// import { ElectricCts } from './elect/ElectricCts.js'
+// ElectricCts.getVoltage
+// ElectricCts.getCurrent
+// ElectricCts.getResistence
 
 // entry point 

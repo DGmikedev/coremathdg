@@ -90,3 +90,17 @@ export function iSNumcMtrxAndHasNVec(arr:number[][], vectrsNum:number): Result{
 
     return result(true, '', arr)
 }
+
+export function hasAzeroOrNaN(vector: number[]):Result{
+
+    try{
+        vector.forEach((number)=>{
+            if( number == 0 || isNaN(number) ) throw( new DataError(`Error at the value, this a NaN or Zero - value: ${number} `) )
+        })
+        
+    }catch(error){
+        return result(false, error, NaN)
+    }
+
+    return result(true, '', true)
+}
