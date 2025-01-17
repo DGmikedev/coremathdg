@@ -8,6 +8,5 @@ export function isZeroOrNaN(number: number):Result{
     }catch(error){
         return result(false, error, NaN)
     }
-
     return result(true, '', true)
 }

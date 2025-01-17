@@ -17,21 +17,21 @@ export function iSSquareAndNumc(arr:number[][]):Result{
 
             if(vector.length != lng){
                ind = index 
-               throw( new DataError(`${msgW} NOT are Square Matrix  ${lng} x ${vector.length}`) )  
+               throw( new DataError(`${msgW} NOT are Square Matrix  ${lng} x ${vector.length}`) );
             } 
-    
+
             vector.forEach((number)=>{
-                ind = index 
+                ind = index
                 if( isNaN(number) || typeof(number) == 'boolean' ){
-                  throw( new DataError(`${msgW} this have a Not Number: [ ${number} ]  ${lng} x ${vector.length} --  ${arr} `) )  
+                  throw( new DataError(`${msgW} this have a Not Number: [ ${number} ]  ${lng} x ${vector.length} --  ${arr} `) );
                 } 
             })
         });
 
     }catch(error){
-        return result(false,error, arr[ind])
+        return result(false,error, arr[ind]);
     }
-        return result(true, {'lng':lng, 'txt':`${lng} x ${lng}`}, true)
+        return result(true, {'lng':lng, 'txt':`${lng} x ${lng}`}, true);
 }
 
 /**
@@ -43,13 +43,12 @@ export function iSNumVect(vect: number[]):Result{
 
     try{
         vect.forEach((num)=>{
-            if( isNaN(num) ) throw( new DataError(`Error in vector this have a NOT Number [ ${num} ]`) )
+            if( isNaN(num) ) throw( new DataError(`Error in vector this have a NOT Number [ ${num} ]`) );
         })
     }catch(error){
-        return result(false, error, NaN)
+        return result(false, error, NaN);
     }
-
-    return result(true, '', true)
+    return result(true, '', true);
 }
 
 
@@ -61,34 +60,31 @@ export function iSNumVect(vect: number[]):Result{
 export function iSNumeric(number: number):Result{
 
     try{
-        if(isNaN(number)) throw( new DataError(`Error value is NOT a Number [ ${number} ]`)  )
-
+        if(isNaN(number)) throw( new DataError(`Error value is NOT a Number [ ${number} ]`)  );
     }catch(error){
-        return result(false,error, NaN )
+        return result(false,error, NaN );
     }
-    return result(true, '', true) 
+    return result(true, '', true);
 }
 
 export function iSNumcMtrxAndHasNVec(arr:number[][], vectrsNum:number): Result{
 
     try{
 
-        if(!(vectrsNum == arr.length)) throw( new DataError(`Matrix have not number rows required = required: ${vectrsNum} | gived ${arr.length} `) ) 
+        if(!(vectrsNum == arr.length)) throw( new DataError(`Matrix have not number rows required = required: ${vectrsNum} | gived ${arr.length} `) );
         if(arr.length > 1) {
-
             arr.forEach((vector)=>{
                 vector.forEach((number)=>{
-                    if( isNaN(number) ) throw( new DataError( `Error matrix has a NOT number [ ${number} ]` ) )
+                    if( isNaN(number) ) throw( new DataError( `Error matrix has a NOT number [ ${number} ]` ) );
                 })
             })
         }else{
-            return result( false, 'Matrix has no more that one vector', NaN )
+            return result( false, 'Matrix has no more that one vector', NaN );
         }
     }catch(error){ 
-        return result( false, error, NaN ) 
+        return result( false, error, NaN );
     }
-
-    return result(true, '', arr)
+    return result(true, '', arr);
 }
 
 export function hasAzeroOrNaN(vector: number[]):Result{
@@ -97,10 +93,8 @@ export function hasAzeroOrNaN(vector: number[]):Result{
         vector.forEach((number)=>{
             if( number == 0 || isNaN(number) ) throw( new DataError(`Error at the value, this a NaN or Zero - value: ${number} `) )
         })
-        
     }catch(error){
-        return result(false, error, NaN)
+        return result(false, error, NaN);
     }
-
-    return result(true, '', true)
+    return result(true, '', true);
 }
