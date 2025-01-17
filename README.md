@@ -5,7 +5,7 @@
 npm install all
 ```
 ## Build the project to Browser or Node
-``` json
+```javascript
 // just browser
 "build-browser": "tsc --project tsconfig.browser.json",
 
@@ -188,8 +188,7 @@ npm install all
 
 ```
 6.- Analysis of electrical circuits using Ohm's law
-
-    All values of entrance are in their magnitude without  prefixes R, V, I 
+All values of entrance are in their magnitude without  prefixes R, V, I 
 
 ```javascript
 
