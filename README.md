@@ -243,4 +243,42 @@ import { getSqRoot } from "./solve/sqrtRootBackShali.js";
 
 console.log( getSqRoot(120, 10, 10) ) // sqrt: 10.954451150103322 
 
+// return
+// { status: true, msg: '', res: 10.954451150103322 }
+```
+
+8.- Evaluate a coefficient raised to an exponent
+
+```javascript
+
+import { evalMonomial } from "./solve/solveMonomials.js"
+
+// example:   coefficcient = 3,  exponent = 4, valueVaraible = 2
+// 1.- 3x^4
+// 2.- 3(2)^4
+// 3.- return => 48
+
+console.log( evalMonomial(3, 4, 2) ) // res = 48
+
+// return { status: true, msg: '', res: 48 }
+
+```
+9.- Fast function to evaluate an array with exponents descendents n-1 to zero 
+
+```javascript
+
+import { evalPolinmcEqtnDescExponent } from "./solve/evalPolinmcEqtnDescExponent.js";
+
+// example:   [3,4,5,6,7]  and x = 2        
+// 1.- 3x^4 +   4x^3   + 5x^2    + 6x   + 7        
+// 2.- 3(2)^4 + 4(2)^3 + 5(2)^2 + 6(2) + 7
+// 3.- return => 120
+
+let eq: number[] = [3,4,5,6,7];
+let var_x: number = 2;
+
+console.log(evalPolinmcEqtnDescExponent(eq, var_x)) // res = 120
+
+// return { status: true, msg: '', res: 120 }
+
 ```

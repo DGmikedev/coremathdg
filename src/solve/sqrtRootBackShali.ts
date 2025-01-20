@@ -1,5 +1,5 @@
 import { Result, result } from "../results/results.js"
-import { iSNumeric } from "../validations/arrayValidations"
+import { iSNumeric } from "../validations/arrayValidations.js"
 
 /**
  * return squre root by BackShali method

@@ -9,8 +9,8 @@
 // // ElectricCts.getCurrent
 // // ElectricCts.getResistence
 // // ElectricCts.addResistences
-
 // import { getSqRoot } from "./solve/sqrtRootBackShali.js";
-
+// import { evalMonomial } from "./solve/solveMonomials.js"
+// import { evalPolinmcEqtnDescExponent } from "./solve/evalPolinmcEqtnDescExponent.js";
 
 // entry point 
