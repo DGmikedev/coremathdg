@@ -10,3 +10,20 @@ export function isZeroOrNaN(number: number):Result{
     }
     return result(true, '', true)
 }
+
+export function isALetterFrmAlph(variable: string): Result{
+
+    let regex = /[a-zA-Z]/;
+
+    try{
+
+        if(regex.exec(variable)){
+            return result(true,'', true);
+        }else{
+            throw(new DataError(`Error at the value, this a value different of a letter - value [${variable}]`) );
+        }
+    }catch(error){
+        return result(false, error, NaN);
+    }
+
+}

@@ -282,3 +282,19 @@ console.log(evalPolinmcEqtnDescExponent(eq, var_x)) // res = 120
 // return { status: true, msg: '', res: 120 }
 
 ```
+
+10.- Representation of polynomials
+
+```javascript
+
+import { getRepresentEquationPolinomial } from "./representations/literals";
+
+let numbers = [1,2,3,4];
+let degrees = [4,3,2,1];
+
+console.log(getRepresentEquationPolinomial(numbers, degrees, 's'));  //  res: 's^4+2s^3+3s^2+4s'
+
+// return 
+// { status: true, msg: '', res: 's^4+2s^3+3s^2+4s' }
+
+```
