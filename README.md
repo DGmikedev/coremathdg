@@ -298,3 +298,33 @@ console.log(getRepresentEquationPolinomial(numbers, degrees, 's'));  //  res: 's
 // { status: true, msg: '', res: 's^4+2s^3+3s^2+4s' }
 
 ```
+
+11.- Solve a polinomial equation with descendent exponent by Newton-Raphson method
+
+```javascript
+
+ import { polinomialDescNwtonRaphson } from "./solve/polinomialDescNwtonRaphson.js";
+
+ let values: number[]      = [ -3, 4, -1, 2, 2, -2 ];
+ let rangeToEval: number[] = [-10,10];
+ let variable: string      = 'x';
+
+ console.log( polinomialDescNwtonRaphson (values, rangeToEval, variable ) )
+
+// return 
+/*
+{
+  status: true,
+  msg: '',
+  res: [
+    '-3x^5+4x^4-x^3+2x^2+2x-2',
+    '-15x^4+16x^3-3x^2+4x+2',  
+    Set(3) {
+      -0.7482723231057171,     
+      0.6022491900373984,      
+      1.4793564664016519
+    }
+  ]
+}
+*/
+```

@@ -74,6 +74,54 @@ export function getRepresentEquationPolinomial(values: number[], degrees: number
   
   }
 
+// 
+/**
+ * make the representation of a equation
+ * the values ​​of the degree matrix are subtracted by one degree and fitted into the equation
+ * @param arrVal   { arrar }
+ * @param arrDegre { array }
+ * @param variable { string }
+ * @returns    equation represntated by string
+ */
+
+export function setRprstDerivEq(arrVal: number[] ,arrDegre: number[] ,variable: string='x'): Result{
+    
+  let eq: string    = '';
+  let value: string = '';
+  let degre: string = '';
+  let tmp: any = '';
+  
+  for(let i = 0; i < arrVal.length; i++){
+    
+    // set de simbol <+,-> in the coefficient
+    value = setSimbol( arrVal[i]  *  arrDegre[i]  );
+
+    tmp = arrDegre[i] -1
+    degre = ( arrDegre[i] -1 ).toString(); 
+    //tmp = ( arrDegre[i] -1 ).toString(); 
+
+    // if the coefficient is 1 or -1, remove the coefficient
+    if( value === '-1' || value === '+1'  ) value = value// set just '- o + '
+
+    tmp >  1 ? eq += value + variable +'^' +  degre:
+    tmp == 1 ? eq += value + variable : 
+    tmp == 0 ? eq += value : '' ;
+
+    // // add monomials to the equation
+    // degre >  1 ? eq += value + variable +'^' +  degre:
+    // degre == 1 ? eq += value + variable : 
+    // degre == 0 ? eq += value : '' ;
+
+  }
+
+  // Remove the + simbol in the first caracter
+  eq.charAt(0) == '+' ? eq = eq.slice(1) : ''; 
+  
+  return result(true, '', eq);
+
+}
+
+
 /**
   * Sets the simbol < + > or < - > to the character supplied
   * @param num { number } 

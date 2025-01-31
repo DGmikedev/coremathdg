@@ -12,6 +12,9 @@
 // import { getSqRoot } from "./solve/sqrtRootBackShali.js";
 // import { evalMonomial } from "./solve/solveMonomials.js"
 // import { evalPolinmcEqtnDescExponent } from "./solve/evalPolinmcEqtnDescExponent.js";
-// import { getRepresentEquationPolinomial } from "./representations/literals";
+// import { evalMonomial } from "./solve/solveMonomials.js";
+// import { getRepresentEquationPolinomial, setRprstDerivEq } from "./representations/literals";
+// import { polinomialDescNwtonRaphson } from "./solve/polinomialDescNwtonRaphson.js";
+
 
 // entry point 

@@ -1,5 +1,5 @@
 import { result, Result } from "../results/results.js";
-import { iSNumVect } from "../validations/arrayValidations.js"
+import { iSNumVect, iSNumeric } from "../validations/arrayValidations.js"
 
 /**
  * Fast function to evaluate an array with exponents descendents n-1 to zero 
@@ -18,9 +18,12 @@ export function evalPolinmcEqtnDescExponent(values: number[], valueVaraible: num
     let grade: number = values.length;
     let res: number = 0;
     
-    values.push(valueVaraible) // adding valueVariable to main vector of values
+    //values.push(valueVaraible) // adding valueVariable to main vector of values
 
     let errScan: Result = iSNumVect(values)
+    if(!errScan.status) return result(false, errScan.msg, NaN) 
+    
+    errScan = iSNumeric(valueVaraible)
     if(!errScan.status) return result(false, errScan.msg, NaN) 
     
     try{
