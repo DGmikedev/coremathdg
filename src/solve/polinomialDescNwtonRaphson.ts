@@ -71,7 +71,7 @@ export function polinomialDescNwtonRaphson(valuesi: number[], rangei: number[], 
 
     resul = polinomialNwtonRaphson(values, valuesDerivates, aproach);
 
-    return result(true, '', [eq, eqDeriv, resul]);
+    return result(true, '', [{'equation':eq, 'equation_dderivate':eqDeriv}, resul]);
 
 }
 
