@@ -317,11 +317,13 @@ console.log(getRepresentEquationPolinomial(numbers, degrees, 's'));  //  res: 's
   status: true,
   msg: '',
   res: [
-    '-3x^5+4x^4-x^3+2x^2+2x-2',
-    '-15x^4+16x^3-3x^2+4x+2',  
+    {
+      equation: '-3x^5+4x^4-x^3+2x^2+2x-2',
+      equation_dderivate: '-15x^4+16x^3-3x^2+4x+2'
+    },
     Set(3) {
-      -0.7482723231057171,     
-      0.6022491900373984,      
+      -0.7482723231057171,
+      0.6022491900373984,
       1.4793564664016519
     }
   ]
