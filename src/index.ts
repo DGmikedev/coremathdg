@@ -16,12 +16,4 @@
 // import { getRepresentEquationPolinomial, setRprstDerivEq } from "./representations/literals";
 // import { polinomialDescNwtonRaphson } from "./solve/polinomialDescNwtonRaphson.js";
 
-import { polinomialDescNwtonRaphson } from "./solve/polinomialDescNwtonRaphson.js";
-
- let values: number[]      = [ -3, 4, -1, 2, 2, -2 ];
- let rangeToEval: number[] = [-10,10];
- let variable: string      = 'x';
-
- console.log( polinomialDescNwtonRaphson (values, rangeToEval, variable ) )
- 
 // entry point 

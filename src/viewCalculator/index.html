@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="viewc.css">
+  <title>CALCULATOR</title>
+
+</head>
+<body>
+    <div class="container">
+      <div style="color:white;"> <!--
+        TODO:<br> Terminar la logica del parentesis, si el string tiene un numero al final porner *( <br>
+        si tienen un simbolo radical, pi, pow, /, X, -, +
+      -->
+
+      </div>
+      <div class="_display" id="disp" >0</div>
+
+      <div class="row">
+
+      <input id="rad" class="key rowsnf" type="button" value="√">
+
+      <input id="pi" class="key rowsnf" type="button" value="π">
+
+      <input id="pow" class="key rowsnf" type="button" value="^">
+
+      <input id="fact" class="key rowsnf" type="button" value="!">
+
+      </div>
+
+      <div class="row">
+      
+      <input id="ac" class="key destacado" type="button" value="AC">
+
+      <input id="parent" class="key destacado" type="button" value="( )">
+
+      <input id="percent" class="key destacado" type="button" value="%">
+
+      <input id="divi" class="key destacado" type="button" value="/">
+
+
+      </div>
+
+      <div class="row">
+
+        <input type="button" class="key" id="num9" value="9">
+
+        <input type="button" class="key" id="num8" value="8">
+
+        <input type="button" class="key" id="num7" value="7">
+
+        <input id="por" class="key destacado" type="button" value="X">
+
+      </div>
+
+      <div class="row">
+
+        <input type="button" id="num6" class="key" value="6">
+
+        <input type="button" id="num5" class="key" value="5">
+
+        <input type="button" id="num4" class="key" value="4">
+
+        <input class="key destacado" id="minus" type="button" value="-">
+
+      </div>
+      <div class="row">
+
+        <input type="button" id="num3" class="key" value="3">
+
+        <input type="button" id="num2" class="key" value="2">
+
+        <input type="button" id="num1" class="key" value="1">
+
+        <input id="plus" class="key destacado" type="button" value="+">
+
+      </div>
+
+      <div class="row">
+
+        <input type="button" class="key" id="num0" value="0">
+
+        <input class="key" id="numdot" type="button" value=".">
+
+        <input class="key" id="del" type="button" value="<=">
+
+        <input id="equal" class="key destacado" type="button" value="=">
+
+      </div>
+    </div>
+  <br>
+<script src="viewc.js"></script>
+</body>
+</html>
